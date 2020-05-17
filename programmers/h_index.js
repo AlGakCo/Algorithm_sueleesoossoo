@@ -25,3 +25,13 @@ function solution(citations) {
 }
 
 console.log(solution([10, 50, 100]))
+
+function corrected_solution(citations) {
+  // h번 이상 인용된 논문의 개수가 h개 이상
+  const arr = citations.sort((a,b) => a - b);
+  let result = [];
+  for(let i = 0; i < arr.length; i++) {
+     result.push(Math.min(arr[i] , arr.length - i ));
+  }
+  return Math.max(...result);
+}
