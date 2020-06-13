@@ -5,6 +5,7 @@ function solution(numbers) {
   arr.forEach(element => {
     if (isPrime(element)) returnable++
   });
+  
   console.log(returnable)
   return returnable
 }
